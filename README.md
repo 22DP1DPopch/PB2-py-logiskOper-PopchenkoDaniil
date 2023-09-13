@@ -1,5 +1,9 @@
 # PB2-py-logiskOper-PopchenkoDaniil
 
+
+# Python logical operators.
+
+
 # AND (and)
 
 - Returns True if both statements are true 
