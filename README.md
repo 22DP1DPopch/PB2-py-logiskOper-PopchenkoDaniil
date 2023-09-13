@@ -8,7 +8,8 @@
 
 Example:
 
--       x < 3 and x < 7
+-       x = 4
+-       x > 1 and x < 7 // True
 
 # OR (or)
 
@@ -16,7 +17,8 @@ Example:
 
 Example:
 
--       x < 5 or x < 4
+-       x = 5
+-       x < 5 or x > 4 // True
 
 # NOT (not)
 
@@ -24,4 +26,5 @@ Example:
 
 Example:
 
--       not(x < 5 and x < 10)
+-       isActive = True
+-       not(isActive) // False
