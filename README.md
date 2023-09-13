@@ -16,6 +16,6 @@ Example: x < 5 or x < 4
 
 # NOT (not)
 
--     Reverse the result, returns False if the result is true
+- Reverse the result, returns False if the result is true
 
 Example: not(x < 5 and x < 10)
