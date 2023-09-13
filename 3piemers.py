@@ -1,13 +1,13 @@
 user_input = float(input('Enter coordinate: '))
 
 
-def define_insert():
-    if user_input <= -2.1:
+def define_insert(x):
+    if x >= -3 and x <= 1.3:
         print('Coordinate intersects')
     else:
         print('Coordinate does not intersect')
 
-# define_insert(user_input)
+define_insert(user_input)
 
 def check(x):
     """
@@ -19,11 +19,9 @@ def check(x):
         >>> check(-3)
         Coordinate intersects
     """
-    return x <= -2.1
+    return x >= -3 and x <= 1.3
 
 if __name__ == "__main__":
     import doctest
     doctest.testmod() #test the whole module.
 
-
-# ! Добавить везде доктест и закинуть в репозиторий рвт 
