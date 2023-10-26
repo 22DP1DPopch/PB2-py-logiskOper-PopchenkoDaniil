@@ -1,59 +1,58 @@
-from doctest import testmod
+import doctest
 
 
 def check_coordinates(punkt_x, punkt_y):
-
     """
     >>> check_coordinates(1, 0)
-    uz robezlinijas
+    uz 'robezlinijas'
     >>> check_coordinates(0, 0)
-    uz robezlinijas
+    uz 'robezlinijas'
     >>> check_coordinates(-1.2, 0)
-    Ārpuss figuras
+    'Ārpuss figuras'
     >>> check_coordinates(0.1, 2.8)
-    iekša
+    'iekša'
     >>> check_coordinates(-0.5, 3.2)
-    iekša
+   'iekša'
     >>> check_coordinates(-0.9, 4.4)
-    Ārpuss figuras
+    'Ārpuss figuras'
     >>> check_coordinates(1.7, 0.3)
-    iekša
+    'iekša'
     >>> check_coordinates(0, 1.5)
-    iekša
+    'iekša'
     >>> check_coordinates(-1, 2)
-    uz robezlinijas
+    'uz robezlinijas'
     >>> check_coordinates(-1, 4.5)
-    uz robezlinijas
+    'uz robezlinijas'
     >>> check_coordinates(-1, 0)
-    uz robezlinijas
+    'uz robezlinijas'
     >>> check_coordinates(2, 0)
-    uz robezlinijas
+    'uz robezlinijas'
     >>> check_coordinates(2, 1)
-    Ārpuss figuras
+    'Ārpuss figuras'
     >>> check_coordinates(3, -1.2)
-    Ārpuss figuras
+    'Ārpuss figuras'
     >>> check_coordinates(1, -2)
-    Ārpuss figuras
+    'Ārpuss figuras'
     >>> check_coordinates(-0.4, -0.3)
-    Ārpuss figuras
+    'Ārpuss figuras'
     >>> check_coordinates(-1, -3)
-    Ārpuss figuras
+    'Ārpuss figuras'
     >>> check_coordinates(-3, 6)
-    Ārpuss figuras
+    'Ārpuss figuras'
     >>> check_coordinates(-0.3, 5)
-    Ārpuss figuras
-    """
+    'Ārpuss figuras'
 
+    """
 
     if punkt_x >= -1 and punkt_y >= 0 and punkt_y <= -1.5*punkt_x+3:
         if punkt_x == -1 or punkt_y == 0 or punkt_y == -1.5*punkt_x+3:
-            print('uz robezlinijas')
+            return 'uz robezlinijas'
         else:
-            print('iekša')
+            return 'iekša'
     else:
-        print('Ārpuss figuras')
+        return 'Ārpuss figuras'
 
-testmod()
+doctest.testmod(verbose=True)
 
 # print('1')
 # check_coordinates(1, 0)
