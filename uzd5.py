@@ -2,8 +2,6 @@ import doctest
 
 def check_cordinates(punkts_x: float, punkts_y: float) -> bool:
     """
-    parbaud vai punkti ir iekšā.
-
     >>> check_cordinates(-4, 4)
     Punkt ir robežas figurai
     >>> check_cordinates(-3, 6)
@@ -28,11 +26,11 @@ def check_cordinates(punkts_x: float, punkts_y: float) -> bool:
         punkts_y == 8 and punkts_x >= -2.9 and punkts_x <= 4) or\
         round(punkts_y,4) == round(6/1.1*punkts_x + 26.2/1.1,4 ) or\
         round(punkts_y,4) == round(-6/4.3*punkts_x + 58.4/4.3 ,4):
-        print ('Punkt ir robežas figurai')
+        print ('Punkt is on the border')
     elif punkts_x > -4 and punkts_x < 8.3 and punkts_y > 4 and punkts_y < 8 and round(punkts_y,4) < round(6/1.1*punkts_x + 26.2/1.1 ,4) and round(punkts_y,4) < round(-6/4.3*punkts_x + 58.4/4.3 ,4):
-        print('Punkt ir iekšā figūrā')
+        print('Punkt is inside')
     else:
-        print('Punkts nav figura')
+        print('Punkts is not inside')
 
 
 doctest.testmod(verbose=True)
